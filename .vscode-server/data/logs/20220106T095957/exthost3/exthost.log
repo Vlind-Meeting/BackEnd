@@ -1,0 +1,39 @@
+[2022-01-06 12:59:45.362] [exthost] [info] Extension host with pid 6307 started
+[2022-01-06 12:59:45.370] [exthost] [error] Error: EEXIST: file already exists, open '/root/.vscode-server/data/User/workspaceStorage/317cc65c38c663f1cf67c63b7a23d0bc/vscode.lock'
+[2022-01-06 12:59:45.372] [exthost] [info] Lock '/root/.vscode-server/data/User/workspaceStorage/317cc65c38c663f1cf67c63b7a23d0bc/vscode.lock': Could not acquire lock, checking if the file is stale.
+[2022-01-06 12:59:45.380] [exthost] [info] Lock '/root/.vscode-server/data/User/workspaceStorage/317cc65c38c663f1cf67c63b7a23d0bc/vscode.lock': The lock does not look stale, elapsed: 876 ms, giving up.
+[2022-01-06 12:59:45.386] [exthost] [info] Lock '/root/.vscode-server/data/User/workspaceStorage/317cc65c38c663f1cf67c63b7a23d0bc-1/vscode.lock': Lock acquired.
+[2022-01-06 12:59:45.632] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:javascript'
+[2022-01-06 12:59:45.708] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-01-06 12:59:45.712] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.github
+[2022-01-06 12:59:45.720] [exthost] [info] ExtensionService#_doActivateExtension vscode.npm, startup: true, activationEvent: 'workspaceContains:package.json'
+[2022-01-06 12:59:46.147] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-01-06 12:59:46.239] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-01-06 12:59:47.328] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-01-06 12:59:47.350] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-01-06 12:59:47.362] [exthost] [info] Eager extensions activated
+[2022-01-06 13:01:00.608] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:json'
+[2022-01-06 13:01:00.620] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+[2022-01-06 13:01:00.647] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
+[2022-01-06 13:01:01.790] [exthost] [error] [vscode.json-language-features] provider FAILED
+[2022-01-06 13:01:01.792] [exthost] [error] Canceled: Canceled
+	at b.makeCancelError (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/extensions/json-language-features/client/dist/node/jsonClientMain.js:1:492410)
+	at b.handleFailedRequest (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/extensions/json-language-features/client/dist/node/jsonClientMain.js:1:492261)
+	at /root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/extensions/json-language-features/client/dist/node/jsonClientMain.js:1:503463
+	at async q.provideColors (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/vs/server/remoteExtensionHostProcess.js:95:107334)
+[2022-01-06 13:28:55.436] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2823
+[2022-01-06 13:28:58.491] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2823
+[2022-01-06 13:29:03.685] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2823
+[2022-01-06 13:29:08.871] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2823
+[2022-01-06 13:29:21.332] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2823
+[2022-01-06 13:29:26.491] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2823
+[2022-01-06 13:29:31.669] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2823
+[2022-01-06 13:29:36.842] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2823
+[2022-01-06 13:29:42.060] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2823
+[2022-01-06 13:29:47.232] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2824
+[2022-01-06 13:29:52.408] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2824
+[2022-01-06 13:29:57.583] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2824
+[2022-01-06 13:30:02.932] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2824
+[2022-01-06 13:30:08.599] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2824
+[2022-01-06 13:30:13.765] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2824
+[2022-01-06 13:30:18.947] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2824
