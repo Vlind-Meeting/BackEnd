@@ -31,3 +31,31 @@
 [2022-01-06 12:59:43.430] [remoteagent] [info] [127.0.0.1][4f33c39b][ExtensionHostConnection] <6307> Launched Extension Host Process.
 [2022-01-06 13:04:43.585] [remoteagent] [info] [127.0.0.1][8fd55534][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
 [2022-01-06 13:04:43.762] [remoteagent] [info] [127.0.0.1][b6d9c9be][ExtensionHostConnection] <29000> Extension Host Process exited with code: 0, signal: null.
+[2022-01-06 13:34:37.743] [remoteagent] [info] [127.0.0.1][c0d2c5f2][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2022-01-06 13:34:37.806] [remoteagent] [info] [127.0.0.1][4f33c39b][ExtensionHostConnection] <6307> Extension Host Process exited with code: 0, signal: null.
+[2022-01-06 13:34:37.806] [remoteagent] [info] Last EH closed, waiting before shutting down
+[2022-01-06 13:35:00.370] [remoteagent] [info] Got delay-shutdown request while in shutdown timeout, delaying
+[2022-01-06 13:35:00.370] [remoteagent] [info] Cancelling previous shutdown timeout
+[2022-01-06 13:35:00.511] [remoteagent] [info] [127.0.0.1][9ac0c49d][ManagementConnection] New connection established.
+[2022-01-06 13:35:00.527] [remoteagent] [info] [127.0.0.1][689ab5bc][ExtensionHostConnection] New connection established.
+[2022-01-06 13:35:00.533] [remoteagent] [info] [127.0.0.1][689ab5bc][ExtensionHostConnection] <11029> Launched Extension Host Process.
+[2022-01-06 13:40:00.372] [remoteagent] [info] New EH opened, aborting shutdown
+[2022-01-06 13:41:57.841] [remoteagent] [info] [127.0.0.1][2055963b][ManagementConnection] New connection established.
+[2022-01-06 13:41:57.847] [remoteagent] [info] [127.0.0.1][eb42507b][ExtensionHostConnection] New connection established.
+[2022-01-06 13:41:57.856] [remoteagent] [info] [127.0.0.1][eb42507b][ExtensionHostConnection] <12293> Launched Extension Host Process.
+[2022-01-06 13:42:08.083] [remoteagent] [info] [127.0.0.1][2055963b][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2022-01-06 13:42:08.113] [remoteagent] [info] [127.0.0.1][eb42507b][ExtensionHostConnection] <12293> Extension Host Process exited with code: 0, signal: null.
+[2022-01-06 13:42:20.368] [remoteagent] [info] [127.0.0.1][274fe2c1][ManagementConnection] New connection established.
+[2022-01-06 13:42:20.369] [remoteagent] [info] [127.0.0.1][d1da1896][ExtensionHostConnection] New connection established.
+[2022-01-06 13:42:20.377] [remoteagent] [info] [127.0.0.1][d1da1896][ExtensionHostConnection] <12463> Launched Extension Host Process.
+[2022-01-06 14:42:13.954] [remoteagent] [info] [127.0.0.1][9ac0c49d][ManagementConnection] The client has reconnected.
+[2022-01-06 14:42:27.443] [remoteagent] [info] [127.0.0.1][689ab5bc][ExtensionHostConnection] The client has reconnected.
+[2022-01-06 17:00:01.092] [remoteagent] [info] [127.0.0.1][9ac0c49d][ManagementConnection] The client has reconnected.
+[2022-01-06 17:00:19.039] [remoteagent] [info] [127.0.0.1][689ab5bc][ExtensionHostConnection] The client has reconnected.
+[2022-01-06 17:34:58.778] [remoteagent] [info] [127.0.0.1][274fe2c1][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[2022-01-06 17:42:26.235] [remoteagent] [info] [127.0.0.1][9ac0c49d][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[2022-01-06 20:26:16.887] [remoteagent] [info] [127.0.0.1][689ab5bc][ExtensionHostConnection] <11029> Extension Host Process exited with code: 0, signal: null.
+[2022-01-06 20:35:04.066] [remoteagent] [info] [127.0.0.1][274fe2c1][ManagementConnection] The reconnection grace time of 3h has expired, so the connection will be disposed.
+[2022-01-06 20:35:09.278] [remoteagent] [info] [127.0.0.1][d1da1896][ExtensionHostConnection] <12463> Extension Host Process exited with code: 0, signal: null.
+[2022-01-06 20:35:09.279] [remoteagent] [info] Last EH closed, waiting before shutting down
+[2022-01-06 20:40:09.281] [remoteagent] [info] Last EH closed, shutting down

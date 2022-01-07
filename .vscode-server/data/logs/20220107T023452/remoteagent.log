@@ -1,0 +1,24 @@
+[2022-01-07 02:34:52.827] [remoteagent] [info] 
+
+*
+* Visual Studio Code Server
+*
+* Reminder: You may only use this software with Visual Studio family products,
+* as described in the license https://aka.ms/vscode-remote/license
+*
+
+
+[2022-01-07 02:34:52.827] [remoteagent] [info] Extension host agent started.
+[2022-01-07 02:34:52.931] [remoteagent] [info] [127.0.0.1][899614d5][ManagementConnection] New connection established.
+[2022-01-07 02:34:52.947] [remoteagent] [info] [127.0.0.1][57d03c55][ExtensionHostConnection] New connection established.
+[2022-01-07 02:34:53.871] [remoteagent] [info] [127.0.0.1][57d03c55][ExtensionHostConnection] <24322> Launched Extension Host Process.
+[2022-01-07 02:35:02.821] [remoteagent] [error] [File Watcher (parcel)] Unexpected error: std::bad_alloc (EUNKNOWN) (path: /root)
+[2022-01-07 02:35:02.825] [remoteagent] [error] [File Watcher (parcel)] restarting watcher after error: std::bad_alloc
+[2022-01-07 03:49:58.110] [remoteagent] [info] [127.0.0.1][899614d5][ManagementConnection] The client has reconnected.
+[2022-01-07 03:50:03.393] [remoteagent] [info] [127.0.0.1][57d03c55][ExtensionHostConnection] The client has reconnected.
+[2022-01-07 05:20:17.576] [remoteagent] [info] [127.0.0.1][e551f57c][ManagementConnection] New connection established.
+[2022-01-07 05:20:17.577] [remoteagent] [info] [127.0.0.1][a8e42dd1][ExtensionHostConnection] New connection established.
+[2022-01-07 05:20:17.587] [remoteagent] [info] [127.0.0.1][a8e42dd1][ExtensionHostConnection] <27391> Launched Extension Host Process.
+[2022-01-07 05:35:14.443] [remoteagent] [info] [127.0.0.1][899614d5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[2022-01-07 08:35:20.846] [remoteagent] [info] [127.0.0.1][899614d5][ManagementConnection] The reconnection grace time of 3h has expired, so the connection will be disposed.
+[2022-01-07 08:35:25.810] [remoteagent] [info] [127.0.0.1][57d03c55][ExtensionHostConnection] <24322> Extension Host Process exited with code: 0, signal: null.

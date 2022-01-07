@@ -1,0 +1,22 @@
+[2022-01-07 13:59:53.783] [exthost] [info] Extension host with pid 7869 started
+[2022-01-07 13:59:53.790] [exthost] [error] Error: EEXIST: file already exists, open '/root/.vscode-server/data/User/workspaceStorage/317cc65c38c663f1cf67c63b7a23d0bc/vscode.lock'
+[2022-01-07 13:59:53.802] [exthost] [info] Lock '/root/.vscode-server/data/User/workspaceStorage/317cc65c38c663f1cf67c63b7a23d0bc/vscode.lock': Could not acquire lock, checking if the file is stale.
+[2022-01-07 13:59:53.806] [exthost] [info] Lock '/root/.vscode-server/data/User/workspaceStorage/317cc65c38c663f1cf67c63b7a23d0bc/vscode.lock': The lock does not look stale, elapsed: 468 ms, giving up.
+[2022-01-07 13:59:53.807] [exthost] [error] Error: EEXIST: file already exists, open '/root/.vscode-server/data/User/workspaceStorage/317cc65c38c663f1cf67c63b7a23d0bc-1/vscode.lock'
+[2022-01-07 13:59:53.809] [exthost] [info] Lock '/root/.vscode-server/data/User/workspaceStorage/317cc65c38c663f1cf67c63b7a23d0bc-1/vscode.lock': Could not acquire lock, checking if the file is stale.
+[2022-01-07 13:59:53.811] [exthost] [info] Lock '/root/.vscode-server/data/User/workspaceStorage/317cc65c38c663f1cf67c63b7a23d0bc-1/vscode.lock': The pid 27391 appears to be gone.
+[2022-01-07 13:59:53.811] [exthost] [info] Lock '/root/.vscode-server/data/User/workspaceStorage/317cc65c38c663f1cf67c63b7a23d0bc-1/vscode.lock': Deleting a stale lock.
+[2022-01-07 13:59:53.819] [exthost] [info] Lock '/root/.vscode-server/data/User/workspaceStorage/317cc65c38c663f1cf67c63b7a23d0bc-1/vscode.lock': Lock acquired.
+[2022-01-07 13:59:54.203] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:json'
+[2022-01-07 13:59:54.217] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+[2022-01-07 13:59:54.241] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
+[2022-01-07 13:59:54.322] [exthost] [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onLanguage:json'
+[2022-01-07 13:59:54.353] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-01-07 13:59:54.356] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.github
+[2022-01-07 13:59:54.715] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-01-07 13:59:54.825] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-01-07 13:59:55.259] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 318
+[2022-01-07 13:59:55.284] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+[2022-01-07 13:59:55.342] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-01-07 13:59:55.359] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-01-07 13:59:55.363] [exthost] [info] Eager extensions activated

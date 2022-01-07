@@ -20,7 +20,7 @@
     "@types/forwarded": "^0.1.0",
     "@types/fresh": "^0.5.0",
     "@types/http-errors": "^1.8.1",
-    "@types/inherits": "0.0.30",
+    "@types/inherits": "^0.0.30",
     "@types/isarray": "^2.0.0",
     "@types/media-typer": "^1.1.1",
     "@types/merge-descriptors": "^1.0.1",
@@ -45,7 +45,10 @@
     "@types/statuses": "^2.0.0",
     "@types/type-is": "^1.6.3",
     "@types/util-deprecate": "^1.0.0",
-    "@types/utils-merge": "0.0.28",
+    "@types/utils-merge": "^0.0.28",
     "@types/vary": "^1.1.0"
+  },
+  "dependencies": {
+    "types-registry": "^0.1.574"
   }
 }

@@ -14,10 +14,10 @@
 ~MSle0~/Pass
 
 # Command Line History (newest to oldest):
+:wq!
+|2,0,1641547874,,"wq!"
 :q!
 |2,0,1603358355,,"q!"
-:wq!
-|2,0,1603358318,,"wq!"
 :q
 |2,0,1598416357,,"q"
 :wq
@@ -68,36 +68,48 @@
 |3,0,36,0,1,0,1582539411,"0"
 
 # File marks:
-'0  14  44  /usr/bin/monitoring-agent.sh
-|4,48,14,44,1603358355,"/usr/bin/monitoring-agent.sh"
+'0  13  13  /etc/netplan/50-cloud-init.yaml
+|4,48,13,13,1641547874,"/etc/netplan/50-cloud-init.yaml"
 '1  14  44  /usr/bin/monitoring-agent.sh
-|4,49,14,44,1603358318,"/usr/bin/monitoring-agent.sh"
-'2  1  0  /home/backup-admin/.ssh/authorized_keys
-|4,50,1,0,1603358286,"/home/backup-admin/.ssh/authorized_keys"
+|4,49,14,44,1603358355,"/usr/bin/monitoring-agent.sh"
+'2  14  44  /usr/bin/monitoring-agent.sh
+|4,50,14,44,1603358318,"/usr/bin/monitoring-agent.sh"
 '3  1  0  /home/backup-admin/.ssh/authorized_keys
-|4,51,1,0,1603356695,"/home/backup-admin/.ssh/authorized_keys"
-'4  56  0  /etc/ssh/sshd_config
-|4,52,56,0,1598416357,"/etc/ssh/sshd_config"
-'5  1  0  /etc/cloud/cloud.cfg
-|4,53,1,0,1598416343,"/etc/cloud/cloud.cfg"
-'6  96  3  /etc/cloud/cloud.cfg
-|4,54,96,3,1583992921,"/etc/cloud/cloud.cfg"
+|4,51,1,0,1603358286,"/home/backup-admin/.ssh/authorized_keys"
+'4  1  0  /home/backup-admin/.ssh/authorized_keys
+|4,52,1,0,1603356695,"/home/backup-admin/.ssh/authorized_keys"
+'5  56  0  /etc/ssh/sshd_config
+|4,53,56,0,1598416357,"/etc/ssh/sshd_config"
+'6  1  0  /etc/cloud/cloud.cfg
+|4,54,1,0,1598416343,"/etc/cloud/cloud.cfg"
 '7  96  3  /etc/cloud/cloud.cfg
 |4,55,96,3,1583992921,"/etc/cloud/cloud.cfg"
-'8  41  0  /etc/ssh/sshd_config
-|4,56,41,0,1583992873,"/etc/ssh/sshd_config"
+'8  96  3  /etc/cloud/cloud.cfg
+|4,56,96,3,1583992921,"/etc/cloud/cloud.cfg"
 '9  41  0  /etc/ssh/sshd_config
 |4,57,41,0,1583992873,"/etc/ssh/sshd_config"
 
 # Jumplist (newest first):
+-'  13  13  /etc/netplan/50-cloud-init.yaml
+|4,39,13,13,1641547874,"/etc/netplan/50-cloud-init.yaml"
+-'  1  0  /etc/netplan/50-cloud-init.yaml
+|4,39,1,0,1641547807,"/etc/netplan/50-cloud-init.yaml"
 -'  14  44  /usr/bin/monitoring-agent.sh
 |4,39,14,44,1603358355,"/usr/bin/monitoring-agent.sh"
+-'  14  44  /usr/bin/monitoring-agent.sh
+|4,39,14,44,1603358355,"/usr/bin/monitoring-agent.sh"
+-'  14  44  /usr/bin/monitoring-agent.sh
+|4,39,14,44,1603358318,"/usr/bin/monitoring-agent.sh"
 -'  14  44  /usr/bin/monitoring-agent.sh
 |4,39,14,44,1603358318,"/usr/bin/monitoring-agent.sh"
 -'  5  0  /usr/bin/monitoring-agent.sh
 |4,39,5,0,1603358296,"/usr/bin/monitoring-agent.sh"
 -'  5  0  /usr/bin/monitoring-agent.sh
 |4,39,5,0,1603358296,"/usr/bin/monitoring-agent.sh"
+-'  5  0  /usr/bin/monitoring-agent.sh
+|4,39,5,0,1603358296,"/usr/bin/monitoring-agent.sh"
+-'  5  0  /usr/bin/monitoring-agent.sh
+|4,39,5,0,1603358296,"/usr/bin/monitoring-agent.sh"
 -'  1  0  /home/backup-admin/.ssh/authorized_keys
 |4,39,1,0,1603358286,"/home/backup-admin/.ssh/authorized_keys"
 -'  1  0  /home/backup-admin/.ssh/authorized_keys
@@ -106,6 +118,22 @@
 |4,39,1,0,1603358286,"/home/backup-admin/.ssh/authorized_keys"
 -'  1  0  /home/backup-admin/.ssh/authorized_keys
 |4,39,1,0,1603358286,"/home/backup-admin/.ssh/authorized_keys"
+-'  1  0  /home/backup-admin/.ssh/authorized_keys
+|4,39,1,0,1603358286,"/home/backup-admin/.ssh/authorized_keys"
+-'  1  0  /home/backup-admin/.ssh/authorized_keys
+|4,39,1,0,1603358286,"/home/backup-admin/.ssh/authorized_keys"
+-'  1  0  /home/backup-admin/.ssh/authorized_keys
+|4,39,1,0,1603358286,"/home/backup-admin/.ssh/authorized_keys"
+-'  1  0  /home/backup-admin/.ssh/authorized_keys
+|4,39,1,0,1603358286,"/home/backup-admin/.ssh/authorized_keys"
+-'  1  0  /home/backup-admin/.ssh/authorized_keys
+|4,39,1,0,1603356695,"/home/backup-admin/.ssh/authorized_keys"
+-'  1  0  /home/backup-admin/.ssh/authorized_keys
+|4,39,1,0,1603356695,"/home/backup-admin/.ssh/authorized_keys"
+-'  1  0  /home/backup-admin/.ssh/authorized_keys
+|4,39,1,0,1603356695,"/home/backup-admin/.ssh/authorized_keys"
+-'  1  0  /home/backup-admin/.ssh/authorized_keys
+|4,39,1,0,1603356695,"/home/backup-admin/.ssh/authorized_keys"
 -'  1  0  /home/backup-admin/.ssh/authorized_keys
 |4,39,1,0,1603356695,"/home/backup-admin/.ssh/authorized_keys"
 -'  1  0  /home/backup-admin/.ssh/authorized_keys
@@ -146,6 +174,70 @@
 |4,39,56,0,1598416357,"/etc/ssh/sshd_config"
 -'  56  0  /etc/ssh/sshd_config
 |4,39,56,0,1598416357,"/etc/ssh/sshd_config"
+-'  56  0  /etc/ssh/sshd_config
+|4,39,56,0,1598416357,"/etc/ssh/sshd_config"
+-'  56  0  /etc/ssh/sshd_config
+|4,39,56,0,1598416357,"/etc/ssh/sshd_config"
+-'  56  0  /etc/ssh/sshd_config
+|4,39,56,0,1598416357,"/etc/ssh/sshd_config"
+-'  56  0  /etc/ssh/sshd_config
+|4,39,56,0,1598416357,"/etc/ssh/sshd_config"
+-'  56  0  /etc/ssh/sshd_config
+|4,39,56,0,1598416357,"/etc/ssh/sshd_config"
+-'  56  0  /etc/ssh/sshd_config
+|4,39,56,0,1598416357,"/etc/ssh/sshd_config"
+-'  56  0  /etc/ssh/sshd_config
+|4,39,56,0,1598416357,"/etc/ssh/sshd_config"
+-'  56  0  /etc/ssh/sshd_config
+|4,39,56,0,1598416357,"/etc/ssh/sshd_config"
+-'  56  0  /etc/ssh/sshd_config
+|4,39,56,0,1598416357,"/etc/ssh/sshd_config"
+-'  56  0  /etc/ssh/sshd_config
+|4,39,56,0,1598416357,"/etc/ssh/sshd_config"
+-'  56  0  /etc/ssh/sshd_config
+|4,39,56,0,1598416357,"/etc/ssh/sshd_config"
+-'  56  0  /etc/ssh/sshd_config
+|4,39,56,0,1598416357,"/etc/ssh/sshd_config"
+-'  56  0  /etc/ssh/sshd_config
+|4,39,56,0,1598416357,"/etc/ssh/sshd_config"
+-'  56  0  /etc/ssh/sshd_config
+|4,39,56,0,1598416357,"/etc/ssh/sshd_config"
+-'  56  0  /etc/ssh/sshd_config
+|4,39,56,0,1598416357,"/etc/ssh/sshd_config"
+-'  56  0  /etc/ssh/sshd_config
+|4,39,56,0,1598416357,"/etc/ssh/sshd_config"
+-'  41  0  /etc/ssh/sshd_config
+|4,39,41,0,1598416348,"/etc/ssh/sshd_config"
+-'  41  0  /etc/ssh/sshd_config
+|4,39,41,0,1598416348,"/etc/ssh/sshd_config"
+-'  41  0  /etc/ssh/sshd_config
+|4,39,41,0,1598416348,"/etc/ssh/sshd_config"
+-'  41  0  /etc/ssh/sshd_config
+|4,39,41,0,1598416348,"/etc/ssh/sshd_config"
+-'  41  0  /etc/ssh/sshd_config
+|4,39,41,0,1598416348,"/etc/ssh/sshd_config"
+-'  41  0  /etc/ssh/sshd_config
+|4,39,41,0,1598416348,"/etc/ssh/sshd_config"
+-'  41  0  /etc/ssh/sshd_config
+|4,39,41,0,1598416348,"/etc/ssh/sshd_config"
+-'  41  0  /etc/ssh/sshd_config
+|4,39,41,0,1598416348,"/etc/ssh/sshd_config"
+-'  41  0  /etc/ssh/sshd_config
+|4,39,41,0,1598416348,"/etc/ssh/sshd_config"
+-'  41  0  /etc/ssh/sshd_config
+|4,39,41,0,1598416348,"/etc/ssh/sshd_config"
+-'  41  0  /etc/ssh/sshd_config
+|4,39,41,0,1598416348,"/etc/ssh/sshd_config"
+-'  41  0  /etc/ssh/sshd_config
+|4,39,41,0,1598416348,"/etc/ssh/sshd_config"
+-'  41  0  /etc/ssh/sshd_config
+|4,39,41,0,1598416348,"/etc/ssh/sshd_config"
+-'  41  0  /etc/ssh/sshd_config
+|4,39,41,0,1598416348,"/etc/ssh/sshd_config"
+-'  41  0  /etc/ssh/sshd_config
+|4,39,41,0,1598416348,"/etc/ssh/sshd_config"
+-'  41  0  /etc/ssh/sshd_config
+|4,39,41,0,1598416348,"/etc/ssh/sshd_config"
 -'  41  0  /etc/ssh/sshd_config
 |4,39,41,0,1598416348,"/etc/ssh/sshd_config"
 -'  41  0  /etc/ssh/sshd_config
@@ -198,100 +290,17 @@
 |4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
 -'  1  0  /etc/cloud/cloud.cfg
 |4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  1  0  /etc/cloud/cloud.cfg
-|4,39,1,0,1598416343,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
--'  96  3  /etc/cloud/cloud.cfg
-|4,39,96,3,1598416328,"/etc/cloud/cloud.cfg"
 
 # History of marks within files (newest to oldest):
+
+> /etc/netplan/50-cloud-init.yaml
+	*	1641547872	0
+	"	13	13
+	^	13	14
+	.	13	13
+	+	11	0
+	+	12	0
+	+	13	13
 
 > /usr/bin/monitoring-agent.sh
 	*	1603358348	0
