@@ -64,3 +64,22 @@ node server0.js
 mysql -u root -p
 cd example1
 nodemon server1.js
+mysql -u root -p
+git add .
+git commit -m "login_part_succeed"
+git push
+cd vlinddate
+nodemon server.js
+sudo lsof -i :80
+sudo kill -9 7955
+nodemon server.js
+cd vlinddate
+nodemon server.js
+mysql -uroot -p
+cd vlinddate
+mysql -u root -p
+nodemon server.js
+sudo lsof -i :80
+kill -9 20206
+nodemon server.js
+mysql -uroot -p

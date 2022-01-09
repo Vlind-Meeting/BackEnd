@@ -7,32 +7,36 @@
 * as described in the license https://aka.ms/vscode-remote/license
 *
 
-Extension host agent listening on 37679
+Extension host agent listening on 37831
 
-[12:58:54] Extension host agent started.
-[12:58:54] [127.0.0.1][e957f8f2][ManagementConnection] New connection established.
-[12:58:54] [127.0.0.1][6eb02547][ExtensionHostConnection] New connection established.
-[12:58:56] [127.0.0.1][6eb02547][ExtensionHostConnection] <1912> Launched Extension Host Process.
-[12:59:01] [127.0.0.1][e957f8f2][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
-[12:59:01] [127.0.0.1][6eb02547][ExtensionHostConnection] <1912> Extension Host Process exited with code: 0, signal: null.
-Last EH closed, waiting before shutting down
-[12:59:01] Last EH closed, waiting before shutting down
-Got delay-shutdown request while in shutdown timeout, delaying
-[13:02:28] Got delay-shutdown request while in shutdown timeout, delaying
-Cancelling previous shutdown timeout
-[13:02:28] Cancelling previous shutdown timeout
-[13:02:28] [127.0.0.1][aae86ed7][ManagementConnection] New connection established.
-[13:02:28] [127.0.0.1][67182436][ExtensionHostConnection] New connection established.
-[13:02:28] [127.0.0.1][67182436][ExtensionHostConnection] <2078> Launched Extension Host Process.
-New EH opened, aborting shutdown
-[13:07:28] New EH opened, aborting shutdown
-[13:57:57] [127.0.0.1][aae86ed7][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[04:02:22] Extension host agent started.
+[04:02:22] [127.0.0.1][ba46d22a][ManagementConnection] New connection established.
+[04:02:23] [127.0.0.1][b2202b5a][ExtensionHostConnection] New connection established.
+[04:02:23] [127.0.0.1][b2202b5a][ExtensionHostConnection] <26572> Launched Extension Host Process.
+rejected promise not handled within 1 second: Error: Could not find pty with id "3"
+stack trace: Error: Could not find pty with id "3",    at l._throwIfNoPty (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/vs/platform/terminal/node/ptyHostMain.js:17:4919),    at l.updateTitle (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/vs/platform/terminal/node/ptyHostMain.js:17:1591),    at Object.call (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/vs/platform/terminal/node/ptyHostMain.js:13:8419),    at L.onPromise (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/vs/platform/terminal/node/ptyHostMain.js:12:4940),    at L.onRawMessage (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/vs/platform/terminal/node/ptyHostMain.js:12:4299),    at /root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/vs/platform/terminal/node/ptyHostMain.js:12:3552,    at R.fire (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/vs/platform/terminal/node/ptyHostMain.js:8:1712),    at process.Q (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/vs/platform/terminal/node/ptyHostMain.js:6:32910),    at process.emit (events.js:315:20),    at emit (internal/child_process.js:903:12),    at processTicksAndRejections (internal/process/task_queues.js:81:21)
+[Error: Could not find pty with id "3",    at l._throwIfNoPty (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/vs/platform/terminal/node/ptyHostMain.js:17:4919),    at l.updateTitle (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/vs/platform/terminal/node/ptyHostMain.js:17:1591),    at Object.call (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/vs/platform/terminal/node/ptyHostMain.js:13:8419),    at L.onPromise (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/vs/platform/terminal/node/ptyHostMain.js:12:4940),    at L.onRawMessage (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/vs/platform/terminal/node/ptyHostMain.js:12:4299),    at /root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/vs/platform/terminal/node/ptyHostMain.js:12:3552,    at R.fire (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/vs/platform/terminal/node/ptyHostMain.js:8:1712),    at process.Q (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/vs/platform/terminal/node/ptyHostMain.js:6:32910),    at process.emit (events.js:315:20),    at emit (internal/child_process.js:903:12),    at processTicksAndRejections (internal/process/task_queues.js:81:21)]
+[05:40:32] [127.0.0.1][ba46d22a][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
 Error: Unexpected SIGPIPE
     at process.<anonymous> (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/bootstrap.js:1:370)
     at process.emit (events.js:315:20)
-[13:59:52] [127.0.0.1][aae86ed7][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
-[13:59:52] [127.0.0.1][49061bd6][ManagementConnection] New connection established.
-[13:59:52] [127.0.0.1][a476ea99][ExtensionHostConnection] New connection established.
-[13:59:52] [127.0.0.1][a476ea99][ExtensionHostConnection] <7869> Launched Extension Host Process.
-[IPC Library: Pty Host]  INFO Persistent process "9": Replaying 4445 chars and 1 size events
-[IPC Library: Pty Host]  INFO Persistent process "10": Replaying 3719 chars and 1 size events
+[06:18:12] [127.0.0.1][ba46d22a][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[06:18:12] [127.0.0.1][b2237bff][ManagementConnection] New connection established.
+[06:18:12] [127.0.0.1][3d153492][ExtensionHostConnection] New connection established.
+[06:18:12] [127.0.0.1][3d153492][ExtensionHostConnection] <31257> Launched Extension Host Process.
+[IPC Library: Pty Host]  INFO Persistent process "6": Replaying 525 chars and 1 size events
+[IPC Library: Pty Host]  INFO Persistent process "7": Replaying 2355 chars and 1 size events
+[06:23:12] [127.0.0.1][ba46d22a][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
+[06:23:12] [127.0.0.1][b2202b5a][ExtensionHostConnection] <26572> Extension Host Process exited with code: 0, signal: null.
+[07:51:53] [127.0.0.1][b2237bff][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+Error: Unexpected SIGPIPE
+    at process.<anonymous> (/root/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/out/bootstrap.js:1:370)
+    at process.emit (events.js:315:20)
+[08:16:42] [127.0.0.1][b2237bff][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[08:16:42] [127.0.0.1][feeb0190][ManagementConnection] New connection established.
+[08:16:42] [127.0.0.1][ff28c229][ExtensionHostConnection] New connection established.
+[08:16:42] [127.0.0.1][ff28c229][ExtensionHostConnection] <10143> Launched Extension Host Process.
+[IPC Library: Pty Host]  INFO Persistent process "6": Replaying 6439 chars and 1 size events
+[IPC Library: Pty Host]  INFO Persistent process "7": Replaying 6407 chars and 1 size events
+[08:21:43] [127.0.0.1][b2237bff][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
+[08:21:43] [127.0.0.1][3d153492][ExtensionHostConnection] <31257> Extension Host Process exited with code: 0, signal: null.

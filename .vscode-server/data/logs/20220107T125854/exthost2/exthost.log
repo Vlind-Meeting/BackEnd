@@ -271,3 +271,6 @@
 [2022-01-07 13:41:17.338] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
 [2022-01-07 13:41:17.369] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
 [2022-01-07 13:41:49.822] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 315
+[2022-01-07 14:04:52.245] [exthost] [info] extension host terminating: renderer disconnected for too long (2)
+[2022-01-07 14:04:52.247] [exthost] [info] Lock '/root/.vscode-server/data/User/workspaceStorage/317cc65c38c663f1cf67c63b7a23d0bc/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+[2022-01-07 14:04:52.297] [exthost] [info] Extension host with pid 2078 exiting with code 0

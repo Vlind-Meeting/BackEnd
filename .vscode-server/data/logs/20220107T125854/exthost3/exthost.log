@@ -20,3 +20,7 @@
 [2022-01-07 13:59:55.342] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
 [2022-01-07 13:59:55.359] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
 [2022-01-07 13:59:55.363] [exthost] [info] Eager extensions activated
+[2022-01-07 14:21:52.117] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 319
+[2022-01-07 20:05:22.714] [exthost] [info] extension host terminating: renderer disconnected for too long (1)
+[2022-01-07 20:05:22.716] [exthost] [info] Lock '/root/.vscode-server/data/User/workspaceStorage/317cc65c38c663f1cf67c63b7a23d0bc-1/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+[2022-01-07 20:05:22.748] [exthost] [info] Extension host with pid 7869 exiting with code 0
