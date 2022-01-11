@@ -110,7 +110,7 @@ app.get(`/survey_match`, (req, res) => {
   let number = req.query.user_number;
   let name, nickname, password, gender, filename, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, heart_num; 
   let sql0 = "select * from survey where number = \'" + number + "\';";
-  let params0 = ['woman', number, number];
+  let params0 = ['woman', number, number, number, number, number, number];
   conn.query(sql0, function(err, rows, field){
     if (err)
       throw err;
@@ -133,8 +133,8 @@ app.get(`/survey_match`, (req, res) => {
       q10 = rows[0].q10;
       heart_num = rows[0].heart_num;
       if(gender == "woman")
-        params0 = ['man', number, number];
-      let sql = "select * from survey where gender = ? and number not in (select send from `match` where receive = ?) and number not in (select receive from `match` where send = ?)" ;
+        params0 = ['man', number, number, number, number, number, number];
+      let sql = "select * from survey where gender = ? and number not in (select send from `match` where receive = ?) and number not in (select receive from `match` where send = ?) and number not in (select send from final where receive = ?) and number not in (select receive from final where send = ?) and number not in (select send from fail where receive = ?) and number not in (select receive from fail where send = ?)" ;
       conn.query(sql, params0, function(err, rows, fields){
           if (err)
             throw(err);
@@ -223,15 +223,15 @@ app.post(`/survey`, (req, res) => {
     }
   });
 
-  let sql0 = "select * from survey where gender = ? and number not in (select send from `match` where receive = ?) and number not in (select receive from `match` where send = ?)" ;
+  let sql0 = "select * from survey where gender = ? and number not in (select send from `match` where receive = ?) and number not in (select receive from `match` where send = ?) and number not in (select send from final where receive = ?) and number not in (select receive from final where send = ?) and number not in (select send from fail where receive = ?) and number not in (select receive from fail where send = ?)" ;
 
-  let params0 = ["man", number, number];
+  let params0 = ["man", number, number, number, number, number, number];
   if(gender === "man")
-    params0 = ["woman", number, number];
+    params0 = ["woman", number, number, number, number, number, number];
     
   conn.query(sql0, params0, function(err, rows, fields){
     if (err)
-      throw(err);
+      throw(err)
     else{
       console.log(rows);
       let n = rows.length;
@@ -277,15 +277,6 @@ app.post(`/survey`, (req, res) => {
   
 })
 
-app.get(`/profile`, (req,res) => {
-  let user_number = req.query.user_number;
-
-
-
-
-
-});
-
 app.post(`/heart_num`, (req, res) => {
   let heart_num = req.body.heart_num;
   let send_number = req.body.send_number;
@@ -326,11 +317,11 @@ app.post(`/heart_num`, (req, res) => {
               q8 = row1[0].q8;
               q9 = row1[0].q9;
               q10 = row1[0].q10;
-              let params2 = ['woman', send_number, send_number];
+              let params2 = ['woman', send_number, send_number, send_number, send_number, send_number, send_number];
               if(gender == "woman")
-                params2 = ['man', send_number, send_number];
+                params2 = ['man', send_number, send_number, send_number, send_number, send_number, send_number];
 
-              let sql2 = "select * from survey where (gender = ?) and number not in (select receive from `match` where send = ? or receive = ?)";
+              let sql2 = "select * from survey where gender = ? and number not in (select send from `match` where receive = ?) and number not in (select receive from `match` where send = ?) and number not in (select send from final where receive = ?) and number not in (select receive from final where send = ?) and number not in (select send from fail where receive = ?) and number not in (select receive from fail where send = ?)" ;
               conn.query(sql2, params2, function(err, rows, fields){
                 if (err)
                   throw(err);
@@ -511,12 +502,100 @@ app.post(`/match_success`, (req, res) =>{
       conn.query(sql, params, function(err, rows, field){
         if(err)
           throw(err)
-        else
-          res.send("success");
+        else{
+          let sql1 = "select nickname from survey where number = ?;";
+          let params1 = [send_number];
+          conn.query(sql1, params1, function(err, row1, field){
+            if(err)
+              throw(err)
+            else{
+              let sql2 = "select nickname from survey where number = ?;";
+              let params2 = [receive_number];
+              conn.query(sql2, params2, function(err, row2, field){
+                if(err)
+                  throw(err)
+                else{
+                  res.json({
+                    send_number: row1[0].nickname,
+                    receive_number: row2[0].nickname,
+                    n: String(n)
+                  });
+                }
+              })
+            }
+          }) 
+        }
       });
     }
   });
 });
+
+app.post(`/match_fail`, (req, res) =>{
+  let send_number = req.body.send_number;
+  let receive_number = req.body.receive_number;
+  let sql0 = "delete from `match` where (receive = ? and send = ?) or (receive = ? and send = ?);";
+  let params0 = [receive_number, send_number, send_number, receive_number];
+  conn.query(sql0, params0, function(err, row0, field){
+    if(err)
+      throw(err)
+    else{
+      let sql = "insert into fail values (?, ?);";
+      let params = [send_number, receive_number];
+      conn.query(sql, params, function(err, rows, field){
+        if(err)
+          throw(err)
+        else
+          res.send("fail_success");
+      });
+    }
+  });
+});
+
+app.get(`/match_check`, (req, res) => {
+  let user_number = req.query.user_number;
+  let sql = "select * from final where send = ?";
+  let params = [user_number];
+  conn.query(sql, params, function(err, rows, field){
+    if(err)
+      throw(err)
+    else{
+      if(rows[0] == undefined){
+        res.json({
+          send_number: "failed",
+          receive_number: "failed",
+          n: "failed",
+          result: "failed"
+        });
+      }
+      else{
+        let sql1 = "select nickname from survey where number = ?;";
+        let params1 = [user_number];
+        conn.query(sql1, params1, function(err, row1, field){
+          if(err)
+            throw(err)
+          else{
+            let sql2 = "select nickname from survey where number = ?;";
+            let params2 = [rows[0].receive];
+            conn.query(sql2, params2, function(err, row2, field){
+              if(err)
+                throw(err)
+              else{
+                res.json({
+                  send_number: row1[0].nickname,
+                  receive_number: row2[0].nickname,
+                  n: String(rows[0].place),
+                  result: "success"
+                });
+              }
+            })
+          }
+        });
+      } 
+    }
+  });
+
+})
+
 
 const inputSend = (callback, user_number) => {
   callback(user_number);
