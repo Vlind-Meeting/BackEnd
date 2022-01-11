@@ -18,7 +18,8 @@
 
 ## login
 
-![Untitled](Server%20js%20086c52b473914607a1c607714dda9776/Untitled.png)
+![Untitled 1](https://user-images.githubusercontent.com/81549602/148946553-9aafd2d8-b408-4d0c-99f6-aee788558121.png)
+
 
 login table은 위처럼 user의 name, number, nickname, password, gender로 구분된다. 
 
