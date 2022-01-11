@@ -98,3 +98,6 @@ nodemon server.js
 mysql -uroot -p
 cd vlinddate
 nodemon server.js
+git add .
+git commit -m "before test updated"
+git push

@@ -560,12 +560,53 @@ app.get(`/match_check`, (req, res) => {
       throw(err)
     else{
       if(rows[0] == undefined){
-        res.json({
-          send_number: "failed",
-          receive_number: "failed",
-          n: "failed",
-          result: "failed"
+        let sql3 = "select * from final where receive = ?";
+        let params3 = [user_number];
+        conn.query(sql3, params3, function(err, row3, field){
+          if(err)
+            throw(err)
+          else{
+            if(row3[0] == undefined){
+              res.json({
+                send_number: "failed",
+                receive_number: "failed",
+                n: "failed",
+                result: "failed"
+              });
+            }
+            else{
+              let sql4 = "select nickname from survey where number = ?;";
+              let params4 = [user_number];
+              conn.query(sql4, params4, function(err, row4, field){
+                if(err)
+                  throw(err)
+                else{
+                  let sql5 = "select nickname from survey where number = ?;";
+                  let params5 = [row3[0].send];
+                  conn.query(sql5, params5, function(err, row5, field){
+                    if(err)
+                      throw(err)
+                    else{
+                      res.json({
+                        send_number: row4[0].nickname,
+                        receive_number: row5[0].nickname,
+                        n: String(row3[0].place),
+                        result: "success"
+                      });
+                    }
+                  })
+                }
+              });
+            } 
+          }
         });
+        
+        // res.json({
+        //   send_number: "failed",
+        //   receive_number: "failed",
+        //   n: "failed",
+        //   result: "failed"
+        // });
       }
       else{
         let sql1 = "select nickname from survey where number = ?;";
