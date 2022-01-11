@@ -27,7 +27,7 @@ login table은 위처럼 user의 name, number, nickname, password, gender로 구
 
 ## Survey
 
-![Untitled](Server%20js%20086c52b473914607a1c607714dda9776/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/81549602/148946620-686327da-cfd8-4a7d-8c8f-3c99ec2c58f1.png)
 
 survey table은 name, number, nickname, password, gender, filename q1, ..., q10, heart_num으로 구성된다.
 
