@@ -83,3 +83,18 @@ sudo lsof -i :80
 kill -9 20206
 nodemon server.js
 mysql -uroot -p
+cd vlinddate
+npm run start
+nodemon server.js
+git add .
+cd ..
+git add .
+git commit -m "survey updated"
+git push
+cd vlinddate
+nodemon server.js
+cd vlinddate
+nodemon server.js
+mysql -uroot -p
+cd vlinddate
+nodemon server.js

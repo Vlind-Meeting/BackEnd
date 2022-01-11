@@ -44,7 +44,7 @@ app.post(`/join`, (req, res) => {
 
 app.get('/login', (req, res) =>{
   let user_number = req.query.user_number;
-  let sql = "SELECT * from login where number = \'" + user_number + "\';";
+  let sql = "SELECT * from survey where number = \'" + user_number + "\';";
   conn.query(sql, function(err,rows,fields) {
     if (err) {
       throw err;
@@ -53,13 +53,19 @@ app.get('/login', (req, res) =>{
       if(rows[0] == undefined){
         res.json({
           number: "failed",
-          password: "failed"
+          password: "failed",
+          filename: "failed",
+          nickname: "failed",
+          name: "failed"
         });
       }
       else{
       res.json({
         number: rows[0].number,
-        password: rows[0].password
+        password: rows[0].password,
+        filename: rows[0].filename,
+        nickname: rows[0].nickname,
+        name: rows[0].name
       });
       console.log(rows[0].number);
       console.log(rows[0].password);
@@ -67,6 +73,127 @@ app.get('/login', (req, res) =>{
     }
   });
 })
+
+app.post(`/survey_insert`, (req, res) => {
+  let name = req.body.name;
+  let number = req.body.number;
+  let nickname = req.body.nickname;
+  let password = req.body.password;
+  let gender = req.body.gender;
+  let filename = req.body.filename;
+  let q1 = req.body.q1;
+  let q2 = req.body.q2;
+  let q3 = req.body.q3;
+  let q4 = req.body.q4;
+  let q5 = req.body.q5;
+  let q6 = req.body.q6;
+  let q7 = req.body.q7;
+  let q8 = req.body.q8;
+  let q9 = req.body.q9;
+  let q10 = req.body.q10;
+
+  let sql = "INSERT INTO survey VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+  let params = [name, number, nickname, password, gender, filename, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, 3];
+  conn.query(sql, params, function(err, rows, fields) {
+    if (err)
+      throw err;
+    else{
+      console.log(rows)
+    }
+  });
+  res.send("succeed");
+});
+
+
+
+app.get(`/survey_match`, (req, res) => {
+  let number = req.query.user_number;
+  let name, nickname, password, gender, filename, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, heart_num; 
+  let sql0 = "select * from survey where number = \'" + number + "\';";
+  let params0 = ['woman', number, number];
+  conn.query(sql0, function(err, rows, field){
+    if (err)
+      throw err;
+    else{
+      name = rows[0].name;
+      number = rows[0].number;
+      nickname = rows[0].nickname;
+      password = rows[0].password;
+      gender = rows[0].gender;
+      filename = rows[0].filename;
+      q1 = rows[0].q1;
+      q2 = rows[0].q2;
+      q3 = rows[0].q3;
+      q4 = rows[0].q4;
+      q5 = rows[0].q5;
+      q6 = rows[0].q6;
+      q7 = rows[0].q7;
+      q8 = rows[0].q8;
+      q9 = rows[0].q9;
+      q10 = rows[0].q10;
+      heart_num = rows[0].heart_num;
+      if(gender == "woman")
+        params0 = ['man', number, number];
+      let sql = "select * from survey where gender = ? and number not in (select send from `match` where receive = ?) and number not in (select receive from `match` where send = ?)" ;
+      conn.query(sql, params0, function(err, rows, fields){
+          if (err)
+            throw(err);
+          else{
+            console.log(3)
+            console.log(rows);
+            console.log(4)
+            let n = rows.length;
+            let val = new Array(n);
+            let arr = new Array(n);
+            let i;
+            for(i = 0; i < n ; i++){
+              let row = rows[i];
+              let v = RMSE(q1, q2, q3, q4, q5, q6, q7, q8, q9, row.q1, row.q2, row.q3, row.q4, row.q5, row.q6, row.q7, row.q8, row.q9) + 0.3*MBTI(q10, row.q10);
+              val[i] = v;
+              arr[i] = v;
+            }
+            val.sort(function(a, b) {
+              return a - b;
+            });
+            console.log(val);
+            console.log(arr)
+            let m1 = val[0];
+            let m2 = val[1];
+            let m3 = val[2];
+            let i1, i2, i3;
+            let j;
+            for(j = 0; j < n; j++){
+              if(arr[j] === m1)
+                i1 = j;
+              else if(arr[j] === m2)
+                i2 = j;
+              else if(arr[j] === m3)
+                i3 = j;
+            }
+            console.log(rows[i1])
+            console.log(rows[i2])
+            console.log(rows[i3])
+            
+            res.json({
+              nickname1: rows[i1].nickname,
+              filename1: rows[i1].filename,
+              number1: rows[i1].number,
+              nickname2: rows[i2].nickname,
+              filename2: rows[i2].filename,
+              number2: rows[i2].number,
+              nickname3: rows[i3].nickname,
+              filename3: rows[i3].filename,
+              number3: rows[i3].number,
+              heart_num: heart_num
+            })
+          }
+        });
+  }
+  });
+});
+
+
+
 
 app.post(`/survey`, (req, res) => {
   let name = req.body.name;
@@ -86,8 +213,8 @@ app.post(`/survey`, (req, res) => {
   let q9 = req.body.q9;
   let q10 = req.body.q10;
 
-  let sql = "INSERT INTO survey VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-  let params = [name, number, nickname, password, gender, filename, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10];
+  let sql = "INSERT INTO survey VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+  let params = [name, number, nickname, password, gender, filename, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, 1];
   conn.query(sql, params, function(err, rows, fields) {
     if (err)
       throw err;
@@ -96,11 +223,11 @@ app.post(`/survey`, (req, res) => {
     }
   });
 
-  let sql0 = "select * from survey where gender = ?" ;
+  let sql0 = "select * from survey where gender = ? and number not in (select send from `match` where receive = ?) and number not in (select receive from `match` where send = ?)" ;
 
-  let params0 = ["man"];
+  let params0 = ["man", number, number];
   if(gender === "man")
-    params0 = ["woman"];
+    params0 = ["woman", number, number];
     
   conn.query(sql0, params0, function(err, rows, fields){
     if (err)
@@ -136,20 +263,268 @@ app.post(`/survey`, (req, res) => {
       res.json({
         nickname1: rows[i1].nickname,
         filename1: rows[i1].filename,
+        number1: rows[i1].number,
         nickname2: rows[i2].nickname,
         filename2: rows[i2].filename,
+        number2: rows[i2].number,
         nickname3: rows[i3].nickname,
-        filename3: rows[i3].filename
+        filename3: rows[i3].filename,
+        number3: rows[i3].number,
+        heart_num: 1
       })
     }
   });
   
 })
 
+app.get(`/profile`, (req,res) => {
+  let user_number = req.query.user_number;
+
+
+
+
+
+});
+
+app.post(`/heart_num`, (req, res) => {
+  let heart_num = req.body.heart_num;
+  let send_number = req.body.send_number;
+  let receive_number = req.body.receive_number;
+  let gender, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10
+
+
+  let sql0 = "update survey set heart_num = ? where number = ?";
+  let params0 = [heart_num, send_number];
+  console.log('!!!!!!!!!')
+  console.log(heart_num);
+  console.log(send_number);
+  console.log(receive_number);
+
+  conn.query(sql0, params0, function(err, rows, fields){
+    if (err)
+      throw err;
+    else{
+      let sql = "insert into `match` values(?, ?)";
+      let params = [send_number, receive_number];
+      conn.query(sql, params, function(err, row2, fields){
+        if(err)
+          throw err;
+        else{
+          let sql1 = "select * from survey where number = \'" + send_number + "\';";
+          conn.query(sql1, function(err, row1, field){
+            if (err)
+              throw err;
+            else{
+              gender = row1[0].gender;
+              q1 = row1[0].q1;
+              q2 = row1[0].q2;
+              q3 = row1[0].q3;
+              q4 = row1[0].q4;
+              q5 = row1[0].q5;
+              q6 = row1[0].q6;
+              q7 = row1[0].q7;
+              q8 = row1[0].q8;
+              q9 = row1[0].q9;
+              q10 = row1[0].q10;
+              let params2 = ['woman', send_number, send_number];
+              if(gender == "woman")
+                params2 = ['man', send_number, send_number];
+
+              let sql2 = "select * from survey where (gender = ?) and number not in (select receive from `match` where send = ? or receive = ?)";
+              conn.query(sql2, params2, function(err, rows, fields){
+                if (err)
+                  throw(err);
+                else{
+                  console.log(3)
+                  console.log(rows);
+                  console.log(4)
+                  let n = rows.length;
+                  let val = new Array(n);
+                  let arr = new Array(n);
+                  let i;
+                  for(i = 0; i < n ; i++){
+                    let row = rows[i];
+                    let v = RMSE(q1, q2, q3, q4, q5, q6, q7, q8, q9, row.q1, row.q2, row.q3, row.q4, row.q5, row.q6, row.q7, row.q8, row.q9) + 0.3*MBTI(q10, row.q10);
+                    val[i] = v;
+                    arr[i] = v;
+                  }
+                  val.sort(function(a, b) {
+                    return a - b;
+                  });
+                  console.log(val);
+                  console.log(arr)
+                  let m1 = val[0];
+                  let m2 = val[1];
+                  let m3 = val[2];
+                  let i1, i2, i3;
+                  let j;
+                  for(j = 0; j < n; j++){
+                    if(arr[j] === m1)
+                      i1 = j;
+                    else if(arr[j] === m2)
+                      i2 = j;
+                    else if(arr[j] === m3)
+                      i3 = j;
+                  }
+                  console.log(rows[i1])
+                  console.log(rows[i2])
+                  console.log(rows[i3])
+                  
+                  res.json({
+                    nickname1: rows[i1].nickname,
+                    filename1: rows[i1].filename,
+                    number1: rows[i1].number,
+                    nickname2: rows[i2].nickname,
+                    filename2: rows[i2].filename,
+                    number2: rows[i2].number,
+                    nickname3: rows[i3].nickname,
+                    filename3: rows[i3].filename,
+                    number3: rows[i3].number,
+                    heart_num: heart_num
+                  })
+                }
+              });
+            }
+          });
+
+        }
+      });
+
+    }
+  });
+
+});
+
+app.post(`/nickname_change`, (req, res) => {
+  let new_nickname = req.body.new_nickname;
+  let number = req.body.number;
+
+  let sql = "update survey set nickname = ? where number = ? ;"
+  let params = [new_nickname, number];
+
+  conn.query(sql, params, function(err, rows, field){
+    if (err)
+      throw err;
+    else{
+      res.send("succeed");
+    }
+  });
+});
+
+app.post(`/password_change`, (req, res) => {
+  let new_password = req.body.new_password;
+  let number = req.body.number;
+
+  let sql = "update survey set nickname = ? where number = ? ;"
+  let params = [new_password, number];
+
+  conn.query(sql, params, function(err, rows, field){
+    if (err)
+      throw err;
+    else{
+      res.send("succeed");
+    }
+  });
+});
+
+app.get(`/message_send`, (req, res) => {
+  let user_number = req.query.user_number;
+  let sql0 = "select receive from `match` where send = ?";
+  let parmas0 = [user_number];
+  let result = [];
+  conn.query(sql0, parmas0, function(err, row0, field){
+    if(err)
+      throw err;
+    else{
+      let n = row0.length;
+      for(let i = 0; i < n; i++){
+        let receive_number = row0[i].receive;
+        let sql = "select nickname from survey where number = ?"
+        let params = [receive_number];
+        conn.query(sql, params, function(err, rows, field){
+          if(err)
+            throw(err);
+          else{
+            result.push({
+              nickname: rows[0].nickname,
+              user_number: receive_number
+            });
+          }
+        })
+      }
+    setTimeout(function(){ 
+      res.send(result);
+    }, 10);
+    }
+  })
+
+});
+
+
+app.get(`/message_receive`, (req, res) => {
+  let user_number = req.query.user_number;
+  let sql0 = "select send from `match` where receive = ?";
+  let parmas0 = [user_number];
+  let result = [];
+  conn.query(sql0, parmas0, function(err, row0, field){
+    if(err)
+      throw err;
+    else{
+      let n = row0.length;
+      for(let i = 0; i < n; i++){
+        let send_number = row0[i].send;
+        let sql = "select nickname, filename from survey where number = ?"
+        let params = [send_number];
+        conn.query(sql, params, function(err, rows, field){
+          if(err)
+            throw(err);
+          else{
+            result.push({
+              nickname: rows[0].nickname,
+              filename: rows[0].filename,
+              user_number: send_number,
+
+            });
+          }
+        })
+      }
+    setTimeout(function(){ 
+      res.send(result);
+    }, 10);
+    }
+  })
+
+});
+
+app.post(`/match_success`, (req, res) =>{
+  let send_number = req.body.send_number;
+  let receive_number = req.body.receive_number;
+  let sql0 = "delete from `match` where (receive = ? and send = ?) or (receive = ? and send = ?);";
+  let params0 = [receive_number, send_number, send_number, receive_number];
+  conn.query(sql0, params0, function(err, row0, field){
+    if(err)
+      throw(err)
+    else{
+      let sql = "insert into final values (?, ?, ?, ?);";
+      let n = Math.floor(Math.random()*10);
+      let params = [send_number, receive_number, n, n];
+      conn.query(sql, params, function(err, rows, field){
+        if(err)
+          throw(err)
+        else
+          res.send("success");
+      });
+    }
+  });
+});
+
+const inputSend = (callback, user_number) => {
+  callback(user_number);
+}
+
 app.listen(80, () => {
   console.log(`서버 실행, 포트 번호 80`);
 });
-
 
 const RMSE = (x1, x2, x3, x4, x5, x6, x7, x8, x9, q1, q2, q3, q4, q5, q6, q7, q8, q9) => {
   let result = Math.sqrt((Math.pow(x1-q1,2)*0.999 + Math.pow(x2-q2,2)*0.998 + Math.pow(x3-q3, 2)*0.997
@@ -181,6 +556,7 @@ const MBTI = (m1, m2) => {
   let j = trans(m2);
   return 6 - arr[i][j];
 }
+
 const trans = (m) => {
   if(m === "INFP")
       return 0;
