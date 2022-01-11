@@ -18,7 +18,8 @@
 
 ## login
 
-![Untitled 1](https://user-images.githubusercontent.com/81549602/148946553-9aafd2d8-b408-4d0c-99f6-aee788558121.png)
+
+![Untitled](https://user-images.githubusercontent.com/81549602/148946663-10acf453-afe8-4d16-9fa8-aedec7211723.png)
 
 
 login table은 위처럼 user의 name, number, nickname, password, gender로 구분된다. 
@@ -43,7 +44,8 @@ heart_num은 사용자가 이성에게 매칭 신청을 보낼 수 있는 하트
 
 ## match
 
-![Untitled](Server%20js%20086c52b473914607a1c607714dda9776/Untitled%202.png)
+![Untitled 4](https://user-images.githubusercontent.com/81549602/148946712-0df72df4-d859-40ad-b8b4-70ee2ef99bc5.png)
+
 
 match table은 send, receive로 구성된다. 
 
@@ -53,7 +55,7 @@ match table은 send, receive로 구성된다.
 
 ## final
 
-![Untitled](Server%20js%20086c52b473914607a1c607714dda9776/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/81549602/148946724-0eb94422-d72f-4a29-9f67-ae2c44454314.png)
 
 final table은 send, receive, place, place_url로 구성된다.
 
@@ -65,7 +67,8 @@ place는 매칭된 커플이 처음으로 만날 장소의 id이며, place_url�
 
 ## fail
 
-![Untitled](Server%20js%20086c52b473914607a1c607714dda9776/Untitled%204.png)
+![Untitled 2](https://user-images.githubusercontent.com/81549602/148946750-f5495ac1-ead6-49d4-9311-8e281a5cdf99.png)
+
 
 fail table은 send, receive로 구성된다.
 
